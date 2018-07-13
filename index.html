@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Log-In</title>
+    <link rel="stylesheet" href="./bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <script src="./jquery-3.3.1.min.js"></script>
+    <script src="./bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/login.css">
+    <script src="./js/login.js"></script>
+</head>
+<body>
+   <div class="container">
+        <div class="row">
+            <div class="col-md-12 ">
+                <div class="wrap">
+                    <p class="form-title">
+                        Sign In</p>
+                        <label id="error" style="display: none; color: red">
+                            <center><h4>Enter the email you signed up with</h4></center>
+                        </label>
+                    <form class="login" id="login-form" action="#">
+                        <input id="login-email" type="email" placeholder="Username" />
+                        <input id="login-pwd" type="password" placeholder="Password" />
+                        <input id="login-btn" type="submit" value="Sign In" class="btn btn-success btn-sm button"/>
+                        <div class="remember-forgot">
+                            <div class="row">
+                                <div class="col-xs-6 col-sm-6 col-md-6">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" />
+                                            Remember Me
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-xs-6 col-sm-6 col-md-6 forgot-pass-content">
+                                    <a href="" class="forgot-pass">Forgot Password</a>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

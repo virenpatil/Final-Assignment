@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My Cart</title>
+    <link rel="stylesheet" href="./bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <script src="./jquery-3.3.1.min.js"></script>
+    <script src="./bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <style>
+    body {
+        margin-top: 20px;
+    }
+    </style>
+</head>
+<body>
+    <!-- top-header -->
+    <div class="navbar top-header-nav">
+        <div class="container">
+            <div class="row">
+                <div class=" col-md-2 col-sm-2 col-xs-2">
+                        <img src="./images/princess-auto-logo.png" alt="PrincessAuto" width="100%">
+                </div>
+                <div class="col-md-10 col-sm-10 ">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#"><span class="glyphicon glyphicon glyphicon-map-marker"></span> Select My Store: <span class="glyphicon glyphicon-triangle-bottom"></span></a>
+                        </li>
+                        <li>
+                                <a href="#" id="logout"><span class="glyphicon glyphicon-log-out"></span> Log out</a>
+                        </li>
+                        <li>
+                            <a href="#"><b style="font-size: 17px"> <Span > EN </Span></b><span> English</span></a>
+                        </li>
+                    </ul>
+                </div>
+                    
+            </div>
+        </div>
+
+
+    </div>
+    <!-- second-header -->
+    <nav class="navbar navbar-inverse">
+            <div class="container">
+                
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>                        
+                </button>
+                
+                <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">SHOP</a></li>
+                    <li><a href="#">SALE</a></li>
+                    <li><a href="#">FLYER</a></li>
+                    <li><a href="#">SHOWCASE</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                    <form class="navbar-form navbar-left" action="#">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Search">
+                            <div class="input-group-btn">
+                            <button class="btn btn-default" type="submit">
+                                <i class="glyphicon glyphicon-search"></i>
+                            </button>
+                            </div>
+                        </div>
+                    </form>
+                    </li>
+                    <li>
+                        <a id="cartCount" href="cart.html">
+                            <span class="glyphicon glyphicon glyphicon-shopping-cart"/>
+                             MY CART(0)
+                        </a>
+                    </li>
+                </ul>
+                </div>
+            </div>
+    </nav>
+
+    <!-- Cart Menu -->
+    <!-- <div class="container " style="background-color: #eee">
+        <div class="row">
+            <div class="col-md-8">
+                <h3>My Cart</h3>
+                <p>View the items currently in your cart below.</p>
+            </div>
+            <div class="col-md-4">
+                    <div class="btn-group-vertical btn-full">
+                        <button type="button" class="btn btn-primary">Check out</button>
+                        <button type="button" class="btn btn-primary">Save</button>
+                        <button type="button" class="btn btn-primary">Clear</button>
+                    </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+               
+            </div>
+        </div>
+    </div> -->
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <div class="panel-title">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <h5><span class="glyphicon glyphicon-shopping-cart"></span> Shopping Cart</h5>
+                                </div>
+                                <div class="col-sm-3">
+                                    <button type="button" id="clear-cart" class="btn btn-primary btn-sm btn-block">
+                                        <span class="glyphicon glyphicon-shopping-cart glyphicon-remove"></span> Clear Cart
+                                    </button>
+                                </div>
+                                <div class="col-sm-3">
+                                    <a href="home.html">
+                                    <button type="button" class="btn btn-primary btn-sm btn-block">
+                                        <span class="glyphicon glyphicon-share-alt"></span> Continue shopping
+                                    </button>
+                                </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div  class="panel-body">
+                        <div id="cart-product">
+
+                        </div>
+                        
+                        <div class="row">
+                            <div class="text-center">
+                                <div class="col-sm-9">
+                                    <h6 class="text-right">Added items?</h6>
+                                </div>
+                                <div class="col-sm-3">
+                                    <button type="button" class="btn btn-default btn-sm btn-block " disabled >
+                                        Update cart
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-footer">
+                        <div class="row text-center">
+                            <div class="col-sm-9">
+                                <h4 class="text-right" id="Total">Total <strong>$00.00</strong></h4>
+                            </div>
+                            <div class="col-sm-3">
+                                <button type="button" class="btn btn-success btn-block">
+                                    Checkout
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+      <!-- footer -->
+      <footer>
+            <div class="footer-1">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4 col-sm-6 col-xs-12">
+                            <h4>FIND YOUR STORE</h4>
+                            <form class="" action="#">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="Search">
+                                    <div class="input-group-btn">
+                                    <button class="btn btn-primary" type="submit">
+                                        LOCATE
+                                    </button>
+                                    </div>
+                                </div>
+                            </form>
+                            <p style="margin: 10px 0 10px;">45 locations across Canada</p>
+                            <img src="./images/princess-auto-logo.png" alt="princess-auto-logo">
+                        </div>
+                        <div class="  col-xs-12 col-sm-6 col-md-3 ">
+                            <h4>CUSTOMER SERVICE</h4>
+                            <ul class="footerUL">
+                                <li>Contact Us</li>
+                                <li>Shipping & Returns</li>
+                                <li>Notices & Recalls</li>
+                                <li>Order Status</li>
+                                <li>Browse by Brand</li>
+                                <li>Wish List Lookup</li>
+                                <li>Financing</li>         
+                            </ul>
+                        </div>
+                        <div class="col-md-3 col-sm-6 col-xs-12">
+                            <h4>ABOUT US</h4>
+                            <ul class="footerUL">
+                                <li>Our Story</li>
+                                <li>Careers</li>
+                                <li>Foundations</li>
+                                <li>Media Room</li>
+                                <li>Accessibility</li>
+                                <li>Vendors</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-2 col-sm-6 col-xs-12">
+                            <h4>GIFT CARDS</h4>
+                            <ul class="footerUL">
+                                <li>Learn More</li>
+                            </ul>
+                            <h4>CONNECT WITH US</h4>
+                            <span class="fa-stack fa-fw">
+                                <a href="#">
+                                    <i class="fa fa-circle fa-stack-2x">&nbsp;</i>
+                                    <i class="fa fa-facebook fa-stack-1x fa-inverse">&nbsp;</i>
+                                </a>
+                            </span>
+                            <span class="fa-stack fa-fw">
+                                <a href="#">
+                                    <i class="fa fa-circle fa-stack-2x">&nbsp;</i>
+                                    <i class="fa fa-facebook fa-stack-1x fa-inverse">&nbsp;</i>
+                                </a>
+                            </span>
+                            <span class="fa-stack fa-fw">
+                                <a href="#">
+                                    <i class="fa fa-circle fa-stack-2x">&nbsp;</i>
+                                    <i class="fa fa-facebook fa-stack-1x fa-inverse">&nbsp;</i>
+                                </a>
+                            </span>
+                            <span class="fa-stack fa-fw">
+                                <a href="#">
+                                    <i class="fa fa-circle fa-stack-2x">&nbsp;</i>
+                                    <i class="fa fa-facebook fa-stack-1x fa-inverse">&nbsp;</i>
+                                </a>
+                            </span>
+        
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-2">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-12">
+                            <p>Copyright © 2018 Princess Auto Ltd. All rights Reserved.</p>
+                            <p>Terms & Conditions / Privacy Policy</p>
+                        </div>
+                        <div class="col-md-6 col-sm-12">
+                            <span><img src="./images/proud_can.jpg" alt="" ></span>
+                            <span><img src="./images/MacAfee.png" alt=""></span>
+                            <span><img src="https://seal.websecurity.norton.com/getseal?at=0&sealid=2&dn=www.princessauto.com&lang=en&tpt=transparent" alt=""></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    
+
+    <script src="./js/cart.js"></script>
+    <script src="./js/logout.js"></script>
+</body>
+</html>
